@@ -153,6 +153,10 @@ Outputs:
 address = hello-elb-1607032391.us-west-2.elb.amazonaws.com
 
 ```
+See the following screenshot.
+![alt text](https://raw.githubusercontent.com/avinashsi/aws_teraform/master/hello_world.png)
+
+
 
 In order to destroy the services created on aws run the following command
 
