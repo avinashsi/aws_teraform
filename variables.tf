@@ -10,6 +10,6 @@ variable "aws_region" {
 # Amazon_Ami
 variable "aws_amis" {
   default = {
-    "us-west-2" = "ami-0f374ff3bc5bb0929 "
+    "us-west-2" = "ami-01e24be29428c15b2"
     }
 }

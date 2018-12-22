@@ -1,6 +1,3 @@
-
-
-
 resource "aws_instance" "web" {
   instance_type = "t2.micro"
   # Lookup the correct AMI based on the region
