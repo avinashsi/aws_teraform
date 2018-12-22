@@ -153,7 +153,9 @@ Outputs:
 address = hello-elb-1607032391.us-west-2.elb.amazonaws.com
 
 ```
-See the following screenshot.
+Go the browser and enter the following url
+hello-elb-1607032391.us-west-2.elb.amazonaws.com
+as shown in following screenshot to access the application.
 ![alt text](https://raw.githubusercontent.com/avinashsi/aws_teraform/master/hello_world.png)
 
 
