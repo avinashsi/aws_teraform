@@ -1,0 +1,94 @@
+$ terraform destroy
+var.key_name
+  Name of the SSH keypair to use in AWS.
+
+  Enter a value: travel
+
+aws_vpc.default: Refreshing state... (ID: vpc-0af2a61b9f27eeaf6)
+aws_internet_gateway.gw: Refreshing state... (ID: igw-01ed7855a46d56624)
+aws_subnet.tf_test_subnet: Refreshing state... (ID: subnet-02ff184f0f44527c8)
+aws_security_group.elb: Refreshing state... (ID: sg-0aa9f8314f435767f)
+aws_route_table.r: Refreshing state... (ID: rtb-01d23b54bb5c76fbe)
+aws_security_group.default: Refreshing state... (ID: sg-0343de91b3b15bb31)
+aws_route_table_association.a: Refreshing state... (ID: rtbassoc-0cdcdd3039260a112)
+aws_instance.web[0]: Refreshing state... (ID: i-0ab344594ee962638)
+aws_instance.web[1]: Refreshing state... (ID: i-0372019e1721c102b)
+aws_elb.web: Refreshing state... (ID: hello-elb)
+aws_lb_cookie_stickiness_policy.default: Refreshing state... (ID: hello-elb:80:lbpolicy)
+
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  - aws_elb.web
+
+  - aws_instance.web[0]
+
+  - aws_instance.web[1]
+
+  - aws_internet_gateway.gw
+
+  - aws_lb_cookie_stickiness_policy.default
+
+  - aws_route_table.r
+
+  - aws_route_table_association.a
+
+  - aws_security_group.default
+
+  - aws_security_group.elb
+
+  - aws_subnet.tf_test_subnet
+
+  - aws_vpc.default
+
+
+Plan: 0 to add, 0 to change, 11 to destroy.
+
+Do you really want to destroy all resources?
+  Terraform will destroy all your managed infrastructure, as shown above.
+  There is no undo. Only 'yes' will be accepted to confirm.
+
+  Enter a value: yes
+
+aws_lb_cookie_stickiness_policy.default: Destroying... (ID: hello-elb:80:lbpolicy)
+aws_route_table_association.a: Destroying... (ID: rtbassoc-0cdcdd3039260a112)
+aws_route_table_association.a: Destruction complete after 1s
+aws_route_table.r: Destroying... (ID: rtb-01d23b54bb5c76fbe)
+aws_lb_cookie_stickiness_policy.default: Destruction complete after 1s
+aws_elb.web: Destroying... (ID: hello-elb)
+aws_route_table.r: Destruction complete after 2s
+aws_elb.web: Destruction complete after 3s
+aws_instance.web[0]: Destroying... (ID: i-0ab344594ee962638)
+aws_instance.web[1]: Destroying... (ID: i-0372019e1721c102b)
+aws_instance.web.0: Still destroying... (ID: i-0ab344594ee962638, 10s elapsed)
+aws_instance.web.1: Still destroying... (ID: i-0372019e1721c102b, 10s elapsed)
+aws_instance.web.0: Still destroying... (ID: i-0ab344594ee962638, 20s elapsed)
+aws_instance.web.1: Still destroying... (ID: i-0372019e1721c102b, 20s elapsed)
+aws_instance.web.0: Still destroying... (ID: i-0ab344594ee962638, 30s elapsed)
+aws_instance.web.1: Still destroying... (ID: i-0372019e1721c102b, 30s elapsed)
+aws_instance.web.0: Still destroying... (ID: i-0ab344594ee962638, 40s elapsed)
+aws_instance.web.1: Still destroying... (ID: i-0372019e1721c102b, 40s elapsed)
+aws_instance.web.1: Still destroying... (ID: i-0372019e1721c102b, 50s elapsed)
+aws_instance.web.0: Still destroying... (ID: i-0ab344594ee962638, 50s elapsed)
+aws_instance.web.1: Still destroying... (ID: i-0372019e1721c102b, 1m0s elapsed)
+aws_instance.web.0: Still destroying... (ID: i-0ab344594ee962638, 1m0s elapsed)
+aws_instance.web.1: Still destroying... (ID: i-0372019e1721c102b, 1m10s elapsed)
+aws_instance.web.0: Still destroying... (ID: i-0ab344594ee962638, 1m10s elapsed)
+aws_instance.web[1]: Destruction complete after 1m16s
+aws_instance.web[0]: Destruction complete after 1m16s
+aws_security_group.default: Destroying... (ID: sg-0343de91b3b15bb31)
+aws_subnet.tf_test_subnet: Destroying... (ID: subnet-02ff184f0f44527c8)
+aws_subnet.tf_test_subnet: Destruction complete after 2s
+aws_security_group.default: Destruction complete after 2s
+aws_security_group.elb: Destroying... (ID: sg-0aa9f8314f435767f)
+aws_security_group.elb: Destruction complete after 1s
+aws_internet_gateway.gw: Destroying... (ID: igw-01ed7855a46d56624)
+aws_internet_gateway.gw: Still destroying... (ID: igw-01ed7855a46d56624, 10s elapsed)
+aws_internet_gateway.gw: Destruction complete after 12s
+aws_vpc.default: Destroying... (ID: vpc-0af2a61b9f27eeaf6)
+aws_vpc.default: Destruction complete after 1s
+
+Destroy complete! Resources: 11 destroyed.
