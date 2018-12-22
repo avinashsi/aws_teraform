@@ -98,7 +98,7 @@ variable "aws_amis" {
     "us-west-2" = "ami-01e24be29428c15b2"
     }
 ```
-Defined Networking in [network.tf](https://raw.githubusercontent.com/avinashsi/aws_teraform/master/network.tf) file which contains definition of vpc, security_groups, subnets, aws_route_table dtl etc.
+Defined Networking in [network.tf](https://raw.githubusercontent.com/avinashsi/aws_teraform/master/network.tf) file which contains definition of vpc, security_groups, subnets, aws_route_table details.
 Below is the example.
 
 Here we have ensured the security_groups associated with ec2 instances have port 80
