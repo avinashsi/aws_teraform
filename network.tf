@@ -59,7 +59,7 @@ resource "aws_security_group" "default" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  # HTTP access from anywhere
+  # HTTP access from elb_security_group only
   ingress {
     from_port   = 80
     to_port     = 80
